@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import AppNavbar from './components/layout/AppNavbar';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
 
 import { Provider } from 'react-redux';
 import store from './store';
@@ -13,6 +13,7 @@ import NurseDashboard from './components/layout/NurseDashboard';
 import AdminDetails from './components/admins/AdminDetails';
 import DoctorDetails from './components/doctors/DoctorDetails';
 import NurseDetails from './components/nurses/NurseDetails';
+import AddDoctor from './components/doctors/AddDoctor';
 
 class App extends Component {
   render() {
@@ -63,6 +64,12 @@ class App extends Component {
                 exact 
                 path="/nurse/:id" 
                 component={NurseDetails } 
+              />
+
+              <Route 
+                exact 
+                path="/doctor/add" 
+                component={AddDoctor } 
               />
           </Switch>
         </div>

@@ -2,9 +2,11 @@
   "name": "patient",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://ChanakaUOMIT.github.io/react_Patient",
   "dependencies": {
     "classnames": "^2.2.6",
     "firebase": "^5.5.6",
+    "gh-pages": "^2.0.1",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
     "react-redux": "^5.1.0",
@@ -15,6 +17,7 @@
     "redux-firestore": "^0.5.8"
   },
   "scripts": {
+    "deploy":"npm run build&&gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
