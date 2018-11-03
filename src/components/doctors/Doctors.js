@@ -56,6 +56,7 @@ class Doctors extends Component {
           <thead className="thead-inverse">
             <tr>
               <th>Name</th>
+              <th>Field</th>
               <th>Email</th>
               <th>Phone</th>
               <th>Total Patient</th>
@@ -68,6 +69,7 @@ class Doctors extends Component {
             {doctors.map(doctor => (
               <tr key={doctor.id}>
                 <td> {doctor.firstName} {doctor.lastName} </td>
+                <td> {doctor.field} </td>
                 <td> {doctor.email} </td>
                 <td> {doctor.phone} </td>
                 <td> {doctor.totalCount} </td>

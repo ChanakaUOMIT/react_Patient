@@ -14,6 +14,7 @@ import AdminDetails from './components/admins/AdminDetails';
 import DoctorDetails from './components/doctors/DoctorDetails';
 import NurseDetails from './components/nurses/NurseDetails';
 import AddDoctor from './components/doctors/AddDoctor';
+import EditDoc  from './components/doctors/EditDoc';
 
 class App extends Component {
   render() {
@@ -68,9 +69,15 @@ class App extends Component {
 
               <Route 
                 exact 
-                path="/doctor/add" 
+                path="/doctors/doctor/add" 
                 component={AddDoctor } 
               />
+              <Route 
+                exact 
+                path="/doctor/:id" 
+                component={EditDoc} 
+              />
+
           </Switch>
         </div>
         </div>

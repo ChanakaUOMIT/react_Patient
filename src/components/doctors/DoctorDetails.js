@@ -8,10 +8,20 @@ import Spinner from '../layout/Spinner';
 import classnames from 'classnames';
 
 class DoctorDetails extends Component {
-    
-    onIncrease=(e)=>{
-        this.setState({[e.count]: e.count+1})
+    constructor(props){
+        super(props);
+        //this.state = {counter : {parseInt(doctor.count)}}
+         //this.increment = this.increment.bind(this);
     }
+      increment=(e) => {
+          e.preventDefault();
+          this.setState({
+              counter : this.state.counter + 1
+          })
+      }
+    // onIncrease=(e)=>{
+    //     this.setState({[e.count]: e.count+1})
+    // }
 
     onDecrease=()=>{
         this.props.doctor.count++;
@@ -53,7 +63,7 @@ class DoctorDetails extends Component {
                         </div>
                         <div className="col-md-4 col-sm-6">
                             <h3 className="pull-right">
-                                Count: 
+                             
                                 <span 
                                     className={classnames({
                                         'text-danger':doctor.count > 0,
@@ -63,12 +73,13 @@ class DoctorDetails extends Component {
                                 </span>
     
                                 <small>
-                                    <a href="#!" onClick={()=>this.onIncrease}>
+                                <button onClick={this.increment}>Patient No: {parseInt(doctor.count)}</button>
+                                    {/* <a href="#!" onClick={()=>this.onIncrease}>
                                     <i class="fas fa-chevron-up"></i>                                    
                                     </a>
                                     <a href="#!" onClick={()=>this.onDecrease}>
                                     <i class="fas fa-chevron-down"></i>                                    
-                                    </a>
+                                    </a> */}
                                 </small>
                             </h3>       
                             {/* {balanceForm} */}
